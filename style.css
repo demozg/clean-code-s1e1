@@ -79,8 +79,8 @@ li {
   text-transform: uppercase;
 }
 
-.tasks__input-text,
-.add-item__input {
+.add-item__input,
+.tasks__input-text {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -94,7 +94,7 @@ li {
   outline: none;
 }
 
-.tasks__input-text,
+.tasks__input-text:focus,
 .add-item__input:focus {
   color: #333;
 }
@@ -123,19 +123,24 @@ li {
   vertical-align: middle;
 }
 
-.tasks__list-item > .tasks__input-checkbox {
+.tasks__input-checkbox {
   margin: 0 10px;
+  box-sizing: border-box;
+  outline: none;
 }
 
-.tasks__list-item > .tasks__text {
+.tasks__text {
+  width: 226px;
+  display: inline-block;
+  flex-grow: 1;
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
-  width: 226px;
 }
 
-.tasks__list-item > .tasks__input-text {
+.tasks__input-text {
   width: 226px;
+  flex-grow: 1;
 }
 
 .tasks__img {
@@ -161,7 +166,6 @@ li {
 
 .edit-mode .tasks__input-text {
   display: inline-block;
-  width: 224px;
 }
 
 .edit-mode .tasks__text {
